@@ -60,7 +60,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Email</p>
-                  <a href="mailto:contact@smartpark.vku" className="text-white hover:text-cyber-blue transition-colors">contact@smartpark.vku</a>
+                  <a href="mailto:tientv.25ceb@vku.udn.vn" className="text-white hover:text-cyber-blue transition-colors">tientv.25ceb@vku.udn.vn</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Điện thoại</p>
-                  <a href="tel:+840123456789" className="text-white hover:text-cyber-blue transition-colors">+84 (0) 123 456 789</a>
+                  <a href="tel:0988732814" className="text-white hover:text-cyber-blue transition-colors">0988732814</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">
