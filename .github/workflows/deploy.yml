@@ -30,7 +30,10 @@ jobs:
         with:
           node-version: 22
 
-      - run: npm install
+      - name: Install dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - run: npm run build
 
