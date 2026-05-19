@@ -151,7 +151,7 @@ const Dashboard = () => {
                 ref={videoRef}
                 autoPlay loop muted playsInline
                 className="absolute inset-0 w-full h-full object-cover"
-                src="/videos/demo.mp4"
+                src="/BaiDoXeAIThongMinh/videos/demo.mp4"
               />
               <div className="absolute inset-0">
                 <div className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent animate-scan" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 function App() {
   return (
     <ErrorBoundary fallbackTitle="Ứng dụng gặp sự cố" fallbackMessage="Đã xảy ra lỗi không mong muốn. Vui lòng tải lại trang.">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/dashboard" element={
@@ -16,7 +16,7 @@ function App() {
             </ErrorBoundary>
           } />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ErrorBoundary>
   );
 }

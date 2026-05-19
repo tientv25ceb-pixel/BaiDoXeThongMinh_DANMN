@@ -92,7 +92,7 @@ const Hero = () => {
               <video
                 autoPlay loop muted playsInline
                 className="absolute inset-0 w-full h-full object-cover opacity-60"
-                src="/videos/hero.mp4"
+                src="/BaiDoXeAIThongMinh/videos/hero.mp4"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-cyber-light/20 to-transparent">
                 <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyber-blue/60 to-transparent animate-scan" />
@@ -189,7 +189,7 @@ const Hero = () => {
               <video
                 autoPlay controls playsInline
                 className="w-full h-full object-cover"
-                src="/videos/demo.mp4"
+                src="/BaiDoXeAIThongMinh/videos/demo.mp4"
               />
               <button
                 onClick={() => setShowDemo(false)}
