@@ -20,7 +20,7 @@ const Hero = () => {
   const [showDemo, setShowDemo] = React.useState(false);
 
   return (
-    <section className="relative min-h-screen pt-28 pb-20 flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen pt-28 pb-20 flex items-center overflow-hidden">
       <ParticleBackground />
 
       <div className="absolute top-0 left-0 w-full h-full -z-[1]">

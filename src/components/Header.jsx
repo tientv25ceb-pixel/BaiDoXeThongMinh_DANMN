@@ -49,9 +49,24 @@ const Header = () => {
   }, []);
 
   const handleClick = (e, href) => {
+    e.preventDefault();
     if (href === '#') {
-      e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const targetId = href.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        const offset = 90; // Chiều cao header + khoảng cách an toàn
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
     setIsOpen(false);
   };
