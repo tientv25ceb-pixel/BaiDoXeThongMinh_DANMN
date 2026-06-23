@@ -1,5 +1,5 @@
 import React from 'react';
-import { CircleParking, Menu, X, BarChart2 } from 'lucide-react';
+import { CircleParking, Menu, X, BarChart2, Play } from 'lucide-react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -126,6 +126,13 @@ const Header = () => {
             );
           })}
           <Link
+            to="/simulation"
+            className="ml-3 flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg bg-neon-green/10 border border-neon-green/30 text-neon-green hover:bg-neon-green/20 transition-all duration-200"
+          >
+            <Play size={16} />
+            Mô phỏng 3D
+          </Link>
+          <Link
             to="/dashboard"
             className="ml-3 flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg bg-cyber-blue/10 border border-cyber-blue/30 text-cyber-blue hover:bg-cyber-blue/20 transition-all duration-200"
           >
@@ -152,28 +159,36 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="mt-2 bg-cyber-dark/95 backdrop-blur-xl rounded-xl border border-white/10 overflow-hidden"
           >
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => handleClick(e, item.href)}
-              className={`block px-5 py-3 text-sm font-medium transition-colors ${
-                item.section === activeSection
-                  ? 'text-cyber-blue bg-cyber-blue/5'
-                  : 'text-gray-400 hover:text-white hover:bg-white/5'
-              }`}
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href)}
+                className={`block px-5 py-3 text-sm font-medium transition-colors ${
+                  item.section === activeSection
+                    ? 'text-cyber-blue bg-cyber-blue/5'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+            <Link
+              to="/simulation"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-neon-green bg-neon-green/5 border-t border-white/10"
             >
-              {item.label}
-            </a>
-          ))}
-          <Link
-            to="/dashboard"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-cyber-blue bg-cyber-blue/5 border-t border-white/10"
-          >
-            <BarChart2 size={16} />
-            Dashboard
-          </Link>
+              <Play size={16} />
+              Mô phỏng 3D
+            </Link>
+            <Link
+              to="/dashboard"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-cyber-blue bg-cyber-blue/5 border-t border-white/10"
+            >
+              <BarChart2 size={16} />
+              Dashboard
+            </Link>
           </motion.nav>
         )}
       </AnimatePresence>

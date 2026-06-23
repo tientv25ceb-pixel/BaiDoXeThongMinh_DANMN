@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Landing from './pages/Landing';
 import Dashboard from './pages/Dashboard';
+import Simulation from './pages/Simulation';
 
 function App() {
   return (
@@ -13,6 +14,11 @@ function App() {
           <Route path="/dashboard" element={
             <ErrorBoundary fallbackTitle="Lỗi Dashboard" fallbackMessage="Không thể tải Dashboard.">
               <Dashboard />
+            </ErrorBoundary>
+          } />
+          <Route path="/simulation" element={
+            <ErrorBoundary fallbackTitle="Lỗi Mô phỏng 3D" fallbackMessage="Không thể tải mô phỏng 3D.">
+              <Simulation />
             </ErrorBoundary>
           } />
         </Routes>

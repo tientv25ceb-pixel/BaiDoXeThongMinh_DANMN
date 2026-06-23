@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Car, Clock, Activity, LogIn, LogOut, Circle } from 'lucide-react';
+import { ArrowLeft, Car, Clock, Activity, LogIn, LogOut, Circle, Play } from 'lucide-react';
 import { AreaChart, Area, PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 
 const DAYS = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
@@ -70,10 +70,16 @@ const Dashboard = () => {
     <div className="min-h-screen bg-cyber-dark text-white">
       <div className="sticky top-0 z-50 bg-cyber-dark/90 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-gray-400 hover:text-cyber-blue transition-colors text-sm font-medium">
-            <ArrowLeft size={18} />
-            Về SmartPark
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link to="/" className="flex items-center gap-2 text-gray-400 hover:text-cyber-blue transition-colors text-sm font-medium">
+              <ArrowLeft size={18} />
+              Về SmartPark
+            </Link>
+            <Link to="/simulation" className="flex items-center gap-1.5 text-gray-400 hover:text-neon-green transition-colors text-sm font-medium">
+              <Play size={16} className="text-neon-green" />
+              Mô phỏng 3D
+            </Link>
+          </div>
           <div className="flex items-center gap-6">
             <div className="text-center">
               <div className="flex items-center gap-2 text-lg font-mono font-bold text-white tracking-wider">
